@@ -1,6 +1,0 @@
-{
-  "defaultDatabase": "ancient-bond-485212-g6",
-  "defaultSchema": "gold_case",
-  "defaultLocation": "US",
-  "warehouse": "bigquery"
-}
