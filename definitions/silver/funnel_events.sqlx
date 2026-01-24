@@ -1,0 +1,28 @@
+config {
+  type: "table",
+  schema: "silver_case",
+  tags: ["silver"]
+}
+
+WITH base AS (
+  SELECT
+    lead_id,
+    TIMESTAMP(event_ts) AS event_ts,
+    UPPER(stage) AS stage,
+    SAFE_CAST(is_conversion AS INT64) AS is_conversion
+  FROM `raw_case.funnel_events_ext`
+),
+dedup AS (
+  SELECT * EXCEPT(rn)
+  FROM (
+    SELECT
+      b.*,
+      ROW_NUMBER() OVER (
+        PARTITION BY lead_id, stage, event_ts
+        ORDER BY event_ts DESC
+      ) AS rn
+    FROM base b
+  )
+  WHERE rn = 1
+)
+SELECT * FROM dedup

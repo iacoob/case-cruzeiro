@@ -1,0 +1,16 @@
+config {
+  type: "view",
+  schema: "gold_case",
+  tags: ["gold", "view", "bi"]
+}
+
+SELECT
+  channel,
+  campaign,
+  COUNT(*) AS leads,
+  SUM(converted_flag) AS converted,
+  SAFE_DIVIDE(SUM(converted_flag), COUNT(*)) AS conversion_rate,
+  AVG(IF(converted_flag = 1, days_to_convert, NULL)) AS avg_days_to_convert
+FROM ${ref("gold_case", "fact_lead_journey")}
+GROUP BY 1,2
+ORDER BY conversion_rate DESC, leads DESC

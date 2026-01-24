@@ -1,0 +1,38 @@
+config {
+    type: "table",
+    schema: "silver_case",
+    tags: ["silver"]
+}
+
+WITH
+  base AS (
+  SELECT
+    lead_id,
+    customer_id,
+    TIMESTAMP(lead_created_at) AS lead_created_at,
+    TIMESTAMP(first_touch_ts) AS first_touch_ts,
+    LOWER(channel) AS channel,
+    LOWER(SOURCE) AS SOURCE,
+    LOWER(medium) AS medium,
+    LOWER(campaign) AS campaign,
+    captured_via,
+    city,
+    device_preference,
+    email_hash
+  FROM
+    `raw_case.crm_leads_ext` ),
+  dedup AS (
+  SELECT
+    * EXCEPT(rn)
+  FROM (
+    SELECT
+      b.*,
+      ROW_NUMBER() OVER (PARTITION BY lead_id ORDER BY lead_created_at DESC) AS rn
+    FROM
+      base b )
+  WHERE
+    rn = 1 )
+SELECT
+  *
+FROM
+  dedup

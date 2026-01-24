@@ -1,0 +1,27 @@
+config {
+  type: "table",
+  schema: "gold_case",
+  tags: ["gold"]
+}
+
+WITH conv AS (
+  SELECT
+    lead_id,
+    MIN(IF(stage = 'WON', event_ts, NULL)) AS conversion_ts
+  FROM ${ref("silver_case", "funnel_events")}
+  GROUP BY lead_id
+)
+SELECT
+  l.lead_id,
+  l.customer_id,
+  l.first_touch_ts,
+  l.lead_created_at,
+  conv.conversion_ts,
+  l.channel,
+  l.source,
+  l.medium,
+  l.campaign,
+  IF(conv.conversion_ts IS NULL, 0, 1) AS converted_flag,
+  TIMESTAMP_DIFF(conv.conversion_ts, l.lead_created_at, HOUR) / 24.0 AS days_to_convert
+FROM ${ref("silver_case", "crm_leads")} l
+LEFT JOIN conv USING (lead_id)

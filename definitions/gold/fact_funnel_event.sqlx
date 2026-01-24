@@ -1,0 +1,12 @@
+config {
+  type: "table",
+  schema: "gold_case",
+  tags: ["gold"]
+}
+
+SELECT
+  lead_id,
+  event_ts,
+  stage,
+  is_conversion
+FROM ${ref("silver_case", "funnel_events")}

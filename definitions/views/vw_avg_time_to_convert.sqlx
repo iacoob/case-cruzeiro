@@ -1,0 +1,10 @@
+config {
+  type: "view",
+  schema: "gold_case",
+  tags: ["gold", "view", "bi"]
+}
+
+SELECT
+  AVG(days_to_convert) AS avg_days_to_convert
+FROM ${ref("gold_case", "fact_lead_journey")}
+WHERE converted_flag = 1
