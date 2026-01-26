@@ -1,0 +1,8 @@
+config { type: "assertion" }
+
+SELECT
+  session_id,
+  COUNT(*) AS cnt
+FROM ${ref("silver_case", "ga_sessions")}
+GROUP BY session_id
+HAVING COUNT(*) > 1

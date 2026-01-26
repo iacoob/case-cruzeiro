@@ -1,0 +1,9 @@
+config { type: "assertion" }
+
+SELECT
+  s.session_id,
+  s.lead_id
+FROM ${ref("gold_case", "fact_ga_session")} s
+LEFT JOIN ${ref("gold_case", "fact_lead_journey")} l
+  ON l.lead_id = s.lead_id
+WHERE l.lead_id IS NULL

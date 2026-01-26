@@ -1,0 +1,14 @@
+config { type: "assertion" }
+
+WITH stats AS (
+  SELECT
+    COUNT(*) AS total_leads,
+    SUM(converted_flag) AS total_converted
+  FROM ${ref("gold_case", "fact_lead_journey")}
+)
+SELECT *
+FROM stats
+WHERE
+  total_leads = 0
+  OR total_converted < 0
+  OR total_converted > total_leads
