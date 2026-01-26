@@ -1,0 +1,8 @@
+defaultProject: ancient-bond-485212-g6
+defaultDataset: dataform
+defaultAssertionDataset: dataform_assertions
+dataformCoreVersion: 3.0.37
+vars:
+  raw_dataset: raw_case
+  silver_dataset: silver_case
+  gold_dataset: gold_case

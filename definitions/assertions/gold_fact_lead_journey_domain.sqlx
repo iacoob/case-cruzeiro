@@ -1,0 +1,15 @@
+config { type: "assertion" }
+
+SELECT
+  lead_id,
+  channel,
+  source,
+  medium,
+  campaign
+FROM ${ref("gold_case", "fact_lead_journey")}
+WHERE
+  channel IS NULL OR channel = ''
+  OR source IS NULL OR source = ''
+  OR medium IS NULL OR medium = ''
+  OR campaign IS NULL OR campaign = ''
+  OR channel NOT IN ('paid_search', 'organic_search', 'paid_social', 'email', 'referral')

@@ -1,0 +1,8 @@
+config { type: "assertion" }
+
+SELECT
+  lead_id
+FROM ${ref("silver_case", "crm_leads")}
+WHERE lead_id IS NULL
+   OR lead_created_at IS NULL
+   OR first_touch_ts IS NULL

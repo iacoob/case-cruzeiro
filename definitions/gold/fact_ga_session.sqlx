@@ -1,0 +1,18 @@
+config {
+  type: "table",
+  schema: "gold_case",
+  tags: ["gold"]
+}
+
+SELECT
+  session_id,
+  lead_id,
+  user_pseudo_id,
+  session_start_ts,
+  source,
+  medium,
+  campaign,
+  landing_page,
+  pageviews,
+  engagement_seconds
+FROM ${ref("silver_case", "ga_sessions")}

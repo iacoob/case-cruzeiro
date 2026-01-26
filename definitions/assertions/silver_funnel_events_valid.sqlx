@@ -1,0 +1,22 @@
+config { type: "assertion" }
+
+WITH invalid_stage AS (
+  SELECT *
+  FROM ${ref("silver_case", "funnel_events")}
+  WHERE stage NOT IN ('MQL', 'SQL', 'PROPOSAL', 'WON')
+),
+invalid_conversion_flag AS (
+  SELECT *
+  FROM ${ref("silver_case", "funnel_events")}
+  WHERE is_conversion NOT IN (0, 1)
+),
+won_must_be_conversion AS (
+  SELECT *
+  FROM ${ref("silver_case", "funnel_events")}
+  WHERE stage = 'WON' AND is_conversion != 1
+)
+SELECT * FROM invalid_stage
+UNION ALL
+SELECT * FROM invalid_conversion_flag
+UNION ALL
+SELECT * FROM won_must_be_conversion

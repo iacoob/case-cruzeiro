@@ -1,0 +1,8 @@
+config { type: "assertion" }
+
+SELECT
+  lead_id,
+  COUNT(*) AS cnt
+FROM ${ref("gold_case", "fact_lead_journey")}
+GROUP BY lead_id
+HAVING COUNT(*) > 1

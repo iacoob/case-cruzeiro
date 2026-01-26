@@ -1,0 +1,22 @@
+config { type: "assertion" }
+
+WITH won AS (
+  SELECT
+    lead_id,
+    MIN(event_ts) AS won_ts
+  FROM ${ref("gold_case", "fact_funnel_event")}
+  WHERE stage = 'WON'
+  GROUP BY lead_id
+)
+SELECT
+  w.lead_id,
+  w.won_ts,
+  l.converted_flag,
+  l.conversion_ts
+FROM won w
+LEFT JOIN ${ref("gold_case", "fact_lead_journey")} l
+  ON l.lead_id = w.lead_id
+WHERE
+  l.lead_id IS NULL
+  OR l.converted_flag != 1
+  OR l.conversion_ts IS NULL
