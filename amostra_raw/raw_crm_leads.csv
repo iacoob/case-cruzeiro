@@ -1,0 +1,41 @@
+lead_id,customer_id,lead_created_at,first_touch_ts,channel,source,medium,campaign,captured_via,city,device_preference,email_hash
+L1031,C531,2025-12-01 14:34:00,2025-12-01 13:17:00,email,crm,email,nurture_december,landing_page,Belo Horizonte,desktop,hash_l1031
+L1012,C512,2025-12-01 23:16:00,2025-12-01 22:22:00,email,crm,email,nurture_december,whatsapp,Salvador,mobile,hash_l1012
+L1001,C501,2025-12-02 09:04:00,2025-12-02 06:47:00,paid_search,google,cpc,generic_keywords,form,Belo Horizonte,tablet,hash_l1001
+L1030,C530,2025-12-03 04:35:00,2025-12-03 04:25:00,email,crm,email,reactivation,form,Rio de Janeiro,mobile,hash_l1030
+L1040,C540,2025-12-03 15:40:00,2025-12-03 13:08:00,email,crm,email,nurture_december,whatsapp,Rio de Janeiro,mobile,hash_l1040
+L1018,C518,2025-12-03 15:42:00,2025-12-03 12:56:00,paid_search,google,cpc,competitor,landing_page,Curitiba,tablet,hash_l1018
+L1006,,2025-12-04 14:05:00,2025-12-04 13:20:00,organic_search,google,organic,seo_content,chat,Rio de Janeiro,tablet,hash_l1006
+L1035,C535,2025-12-05 13:23:00,2025-12-05 11:05:00,paid_search,google,cpc,competitor,landing_page,Rio de Janeiro,desktop,hash_l1035
+L1028,C528,2025-12-06 13:05:00,2025-12-06 12:21:00,paid_search,google,cpc,brand_search,whatsapp,Salvador,mobile,hash_l1028
+L1029,,2025-12-07 03:57:00,2025-12-07 02:54:00,email,crm,email,nurture_december,landing_page,Curitiba,tablet,hash_l1029
+L1026,C526,2025-12-07 11:40:00,2025-12-07 11:02:00,paid_search,google,cpc,generic_keywords,chat,Belo Horizonte,desktop,hash_l1026
+L1036,,2025-12-07 17:00:00,2025-12-07 14:28:00,paid_social,meta,paid_social,lookalike,form,São Paulo,mobile,hash_l1036
+L1015,C515,2025-12-08 04:05:00,2025-12-08 02:32:00,organic_search,google,organic,seo_content,form,Belo Horizonte,tablet,hash_l1015
+L1009,,2025-12-08 23:49:00,2025-12-08 22:52:00,paid_social,meta,paid_social,retargeting,whatsapp,Rio de Janeiro,tablet,hash_l1009
+L1032,C532,2025-12-09 02:43:00,2025-12-09 01:02:00,organic_search,google,organic,seo_content,chat,São Paulo,desktop,hash_l1032
+L1010,,2025-12-09 03:05:00,2025-12-09 02:09:00,organic_search,google,organic,seo_content,form,Rio de Janeiro,desktop,hash_l1010
+L1020,C520,2025-12-09 21:37:00,2025-12-09 21:27:00,email,crm,email,nurture_december,landing_page,São Paulo,desktop,hash_l1020
+L1038,C538,2025-12-10 08:31:00,2025-12-10 06:37:00,paid_search,google,cpc,brand_search,chat,Rio de Janeiro,mobile,hash_l1038
+L1019,,2025-12-11 04:11:00,2025-12-11 03:31:00,paid_social,meta,paid_social,retargeting,whatsapp,Curitiba,mobile,hash_l1019
+L1027,,2025-12-11 10:26:00,2025-12-11 08:59:00,paid_social,meta,paid_social,retargeting,whatsapp,Belo Horizonte,desktop,hash_l1027
+L1013,,2025-12-11 11:39:00,2025-12-11 11:09:00,paid_search,google,cpc,brand_search,form,Belo Horizonte,tablet,hash_l1013
+L1005,,2025-12-11 21:03:00,2025-12-11 20:08:00,organic_search,google,organic,seo_content,whatsapp,Rio de Janeiro,tablet,hash_l1005
+L1016,C516,2025-12-13 13:31:00,2025-12-13 10:32:00,paid_social,meta,paid_social,awareness_video,whatsapp,São Paulo,desktop,hash_l1016
+L1002,,2025-12-13 16:37:00,2025-12-13 14:56:00,paid_social,meta,paid_social,retargeting,form,Rio de Janeiro,mobile,hash_l1002
+L1008,C508,2025-12-14 05:23:00,2025-12-14 03:22:00,paid_search,google,cpc,competitor,form,São Paulo,desktop,hash_l1008
+L1024,C524,2025-12-14 05:52:00,2025-12-14 03:11:00,referral,partner_blog,referral,partner_q4,whatsapp,São Paulo,tablet,hash_l1024
+L1017,C517,2025-12-14 15:08:00,2025-12-14 14:57:00,paid_social,meta,paid_social,lookalike,chat,São Paulo,mobile,hash_l1017
+L1039,C539,2025-12-15 07:29:00,2025-12-15 07:20:00,paid_social,meta,paid_social,retargeting,form,São Paulo,desktop,hash_l1039
+L1023,C523,2025-12-16 03:13:00,2025-12-16 00:21:00,referral,partner_blog,referral,partner_q4,landing_page,Belo Horizonte,tablet,hash_l1023
+L1007,C507,2025-12-17 03:03:00,2025-12-17 01:07:00,paid_social,meta,paid_social,awareness_video,landing_page,Curitiba,desktop,hash_l1007
+L1022,C522,2025-12-17 08:59:00,2025-12-17 06:51:00,paid_search,google,cpc,brand_search,form,Salvador,mobile,hash_l1022
+L1003,C503,2025-12-17 22:20:00,2025-12-17 20:21:00,paid_social,meta,paid_social,lookalike,landing_page,Belo Horizonte,desktop,hash_l1003
+L1037,C537,2025-12-18 11:59:00,2025-12-18 10:42:00,organic_search,google,organic,seo_content,chat,Salvador,mobile,hash_l1037
+L1021,,2025-12-19 00:43:00,2025-12-18 22:14:00,paid_social,meta,paid_social,retargeting,chat,São Paulo,mobile,hash_l1021
+L1014,C514,2025-12-20 01:56:00,2025-12-20 00:50:00,paid_search,google,cpc,generic_keywords,chat,Curitiba,mobile,hash_l1014
+L1011,,2025-12-20 08:11:00,2025-12-20 06:20:00,email,crm,email,reactivation,whatsapp,São Paulo,tablet,hash_l1011
+L1033,,2025-12-20 11:14:00,2025-12-20 09:10:00,organic_search,google,organic,seo_content,landing_page,São Paulo,tablet,hash_l1033
+L1025,,2025-12-21 03:12:00,2025-12-21 03:09:00,email,crm,email,nurture_december,whatsapp,Belo Horizonte,desktop,hash_l1025
+L1034,,2025-12-21 05:10:00,2025-12-21 03:46:00,email,crm,email,nurture_december,chat,Rio de Janeiro,tablet,hash_l1034
+L1004,C504,2025-12-21 06:31:00,2025-12-21 04:44:00,email,crm,email,nurture_december,form,São Paulo,tablet,hash_l1004
